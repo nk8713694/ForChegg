@@ -1,0 +1,11 @@
+, Kafka Connect is not a built-in feature in Camunda BPM 7. Camunda BPM is primarily focused on workflow management and automation, and it does not provide direct integration with Kafka or Kafka Connect out of the box.
+
+However, you can still integrate Camunda BPM 7 with Kafka Connect by implementing custom code or utilizing external libraries and frameworks. Here's an approach you can take:
+
+Develop Kafka Consumer Code: Write custom Java code using Kafka client libraries to consume messages from Kafka topics. This code will handle the consumption logic and processing of Kafka messages. You can implement this code as a separate Java class or service.
+
+Integrate Kafka Consumer Code with Camunda: Within your Camunda BPM 7 application, you can include the custom Kafka consumer code as a dependency or module. You can then invoke the Kafka consumer code from within your Camunda process by utilizing Service Tasks or external service invocations.
+
+Deploy and Execute Camunda Processes: Deploy your Camunda BPM 7 application along with the Kafka consumer code. Start process instances, and when they reach the appropriate Service Task or service invocation point, the Kafka consumer code will be executed to consume messages from Kafka topics.
+
+By combining custom Kafka consumer code with Camunda BPM 7, you can achieve Kafka topic consumption within your Camunda processes. However, it's important to note that this approach requires custom development and does not leverage the direct capabilities of Kafka Connect.
